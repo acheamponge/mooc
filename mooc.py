@@ -2,46 +2,39 @@ import pandas as pd
 import csv
 
 ''' This is a python module for the online learning community.'''
+df_blp = pd.read_csv('learning_path_bus.csv')
+df_clp = pd.read_csv('learning_path_cre.csv')
 
-class Linkedin_lp_business(object):
+def llp_bus_csv():
+    '''This is a method that returns a CSV file of all the learning paths in the business category.'''
+    return(df_blp)
 
-    def __init__(self):
-        self.df_blp = pd.read_csv('learning_path_bus.csv')
+def llp_bus_courses():
+    '''This is a method that returns a list of all the learning paths in the business category.'''
+    return(df_blp['name'].tolist())
 
-    def csv(self):
-        '''This is a method that returns a CSV file of all the learning paths in the business category.'''
-        return(self.df_blp)
+def llp_bus_skills():
+    '''This is a method that returns a list of all the skills in the business category.'''
+    return(df_blp.groupby('skills').count().index.tolist())
 
-    def courseList(self):
-        '''This is a method that returns a list of all the learning paths in the business category.'''
-        return(self.df_blp['name'].tolist())
-
-    def skillsList(self):
-        '''This is a method that returns a list of all the skills in the business category.'''
-        return(self.df_blp.groupby('skills').count().index.tolist())
-
-    def skillsdict(self):
-        '''This is a method that returns a dictionary of skills and their learning paths in the business category.'''
-        return(self.df_blp.groupby('skills')['name'].apply(list).to_dict())
+def llp_bus_dict():
+    '''This is a method that returns a dictionary of skills and their learning paths in the business category.'''
+    return(df_blp.groupby('skills')['name'].apply(list).to_dict())
 
 
-class Linkedin_lp_creative(object):
 
-    def __init__(self):
-        self.df_clp = pd.read_csv('learning_path_cre.csv')
+def llp_cre_csv():
+    '''This is a method that returns a CSV file of all the learning paths in the creative category.'''
+    return(df_clp)
 
-    def csv(self):
-        '''This is a method that returns a CSV file of all the learning paths in the creative category.'''
-        return(self.df_clp)
+def llp_cre_courses():
+    '''This is a method that returns a list of all the learning paths in the creative category.'''
+    return(.df_clp['name'].tolist())
 
-    def courseList(self):
-        '''This is a method that returns a list of all the learning paths in the creative category.'''
-        return(self.df_clp['name'].tolist())
+def llp_cre_skills():
+    '''This is a method that returns a list of all the skills in the creative category.'''
+    return(.df_clp.groupby('skills').count().index.tolist())
 
-    def skillsList(self):
-        '''This is a method that returns a list of all the skills in the creative category.'''
-        return(self.df_clp.groupby('skills').count().index.tolist())
-
-    def skillsdict(self):
-        '''This is a method that returns a dictionary of skills and their learning paths in the creative category.'''
-        return(self.df_clp.groupby('skills')['name'].apply(list).to_dict())
+def llp_cre_dict():
+    '''This is a method that returns a dictionary of skills and their learning paths in the creative category.'''
+    return(.df_clp.groupby('skills')['name'].apply(list).to_dict())
