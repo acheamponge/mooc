@@ -14,5 +14,9 @@ def linkedin_learning_path_business_list():
     return(df_blp['name'].tolist())
 
 def linkedin_learning_path_business_skills():
-    '''This is a method that returns a list of all the learning paths in the business category.'''
+    '''This is a method that returns a list of all the skills in the business category.'''
     return(df_blp.groupby('skills').count().index.tolist())
+
+def linkedin_learning_path_business_authors():
+    '''This is a method that returns a dictionary of skills and their learning paths in the business category.'''
+    return(df_blp.groupby('skills')['name'].apply(list).to_dict())
