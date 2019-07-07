@@ -55,4 +55,4 @@ Licence
 Authors
 -------
 
-`MOOC` was written by `Emmanuel Acheampong <achampion.emma@gmail.com>`_.
+`mooc` was written by `Emmanuel Acheampong <achampion.emma@gmail.com>`_.
