@@ -2,9 +2,9 @@ import pandas as pd
 import csv
 
 ''' This is a python module for the online learning community.'''
-df_blp = pd.read_csv('learning_path_bus.csv')
-df_clp = pd.read_csv('learning_path_cre.csv')
-df_tlp = pd.read_csv('learning_path_tech.csv')
+df_blp = pd.read_csv("./csv/learning_path_bus.csv")
+df_clp = pd.read_csv('./csv/learning_path_cre.csv')
+df_tlp = pd.read_csv('./csv/learning_path_tech.csv')
 def llp_bus_csv():
     '''This is a method that returns a CSV file of all the learning paths in the business category.'''
     return(df_blp)
