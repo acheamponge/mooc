@@ -23,4 +23,3 @@ class Linkedin_lp_business(object):
     def skillsdict(self):
         '''This is a method that returns a dictionary of skills and their learning paths in the business category.'''
         return(self.df_blp.groupby('skills')['name'].apply(list).to_dict())
-    
