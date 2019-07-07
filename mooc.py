@@ -29,12 +29,12 @@ def llp_cre_csv():
 
 def llp_cre_courses():
     '''This is a method that returns a list of all the learning paths in the creative category.'''
-    return(.df_clp['name'].tolist())
+    return(df_clp['name'].tolist())
 
 def llp_cre_skills():
     '''This is a method that returns a list of all the skills in the creative category.'''
-    return(.df_clp.groupby('skills').count().index.tolist())
+    return(df_clp.groupby('skills').count().index.tolist())
 
 def llp_cre_dict():
     '''This is a method that returns a dictionary of skills and their learning paths in the creative category.'''
-    return(.df_clp.groupby('skills')['name'].apply(list).to_dict())
+    return(df_clp.groupby('skills')['name'].apply(list).to_dict())
