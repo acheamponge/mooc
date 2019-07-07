@@ -22,7 +22,7 @@ setup(
     author="Emmanuel Acheampong",
     author_email="achampion.emma@gmail.com",
 
-    description="A pip helper of MOOC learning",
+    description="This is a python package for helping the online learning community.",
     long_description=read("README.rst"),
 
     packages=find_packages(exclude=('tests',)),
@@ -30,8 +30,6 @@ setup(
     install_requires=[],
 
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
